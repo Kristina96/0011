@@ -1,0 +1,242 @@
+/*
+	кремовый - #d8ddc1
+	зелёный тёмный - rgb(53,58,51)
+	зелёный - rgb(78,125,5)
+*/
+* {
+    padding: 0;
+	margin: 0;
+	box-sizing: border-box;	
+}
+body {
+  width: 100%;
+	background: #d8ddc1;
+	font-family: 'PT Sans', sans-serif;
+	color: #fff;
+}
+input {
+	border: none;
+	outline: none;
+	background: none;
+}
+a {
+    text-decoration: none;
+		color: #fff;
+}
+p {
+	color: rgb(53,58,51);
+}
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.container, nav ul {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+section {
+	color: rgb(53,58,51);
+}
+header {
+	z-index: 20;
+	background-color: #353a33;
+}
+
+.logo {
+	display: block;
+	padding-left: 60px;
+	background: url(list.png) no-repeat left center;
+	font-weight: 100;
+	text-align: right;
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.logo h1 {
+	font-weight: 100;
+}
+
+.logo span {
+	padding-right: 15px;
+	font-weight: 100;
+	font-style: italic;
+}
+
+header .container > span {
+		float: right;
+		text-align: right;
+		margin-top: 40px;
+		margin-bottom: 30px;
+		line-height: 55px;
+}
+nav {
+	width: 100%;
+	background-color: #7fbf22;
+	clear: both;
+	background-image: -webkit-linear-gradient(top, #91b558, #85cb16);
+	background-image: -moz-linear-gradient(top, #91b558, #85cb16);
+	box-shadow: 0 -15px 10px -10px #333;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	display: block;
+	padding: 15px 10px;
+	position: relative;
+}
+
+nav ul li a::after {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 50%;/* center triangle */
+    margin-left: -7px;
+		bottom: 0px; /* Положение треугольника */
+    border: 7px solid transparent; /* Прозрачные границы */
+    border-bottom: 7px solid rgba(255,255,255,0.3); /* Добавляем треугольник */
+}
+
+nav ul li a.active::after {
+    border-bottom: 7px solid rgba(255,255,255,1);
+}
+
+
+body > section:first-of-type {
+	box-shadow: inset 0 15px 10px -10px #333;
+	background: url(shadow.png) no-repeat left center;
+	background-size: cover;
+	min-height: 300px;
+	padding: 40px 0;
+}
+
+body > section:first-of-type p {
+	font-size: 40px;
+	padding-right: 40%;
+	color: #fff;
+}
+
+body > section:nth-of-type(2) .container {
+	display: flex;
+  justify-content: space-between;
+}
+
+section h1,
+section h2,
+section h3 {
+	padding: 20px 0;
+}
+section p {
+	font-size: 14px;
+}
+body > section:nth-of-type(2) {
+	border-bottom: 1px solid rgb(78,125,5);
+	outline: 2px solid #d8ddc1;
+}
+
+.left {
+	width:65%;
+	padding: 35px 0;
+}
+.left img {
+	float: left;
+	border: 1px solid rgba(53,58,51, 0.07);
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px rgba(0,0,0, 0.06);
+	margin-right: 20px;
+}
+
+.left h1 {
+	padding: 10px 0;
+	font-size: 24px;
+	color: rgba(53,58,51, 0.4);
+}
+
+.left h2 {
+	font-size: 18px;
+}
+.left h2:nth-of-type(2) {
+	color: rgba(78,125,5, 0.6);
+}
+.left p:first-of-type {
+	margin-bottom: 20px;
+	color: rgba(78,125,5, 0.8);
+}
+.left p:nth-of-type(2),
+.left span {
+	color: rgba(53,58,51, 0.8);
+}
+.left p:nth-of-type(3) {
+	color: rgba(53,58,51, 0.5);
+}
+.left form {
+	display: inline-block;
+	padding-top: 30px;
+	padding-right: 40px;
+}
+.left form input[type="button"] {
+	background-image: -webkit-linear-gradient(top, #91b558, #85cb16);
+	background-image: -moz-linear-gradient(top, #91b558, #85cb16);
+	padding: 5px 20px;
+	cursor: pointer;
+	color: #fff;
+	border: 1px solid rgba(53,58,51, 0.4);
+	border-radius: 15px;
+	font-size: 14px;
+}
+
+.left span {
+	font-size: 12px;
+}
+
+.right {
+	position: relative;
+	width:25%;
+}
+
+.right img {
+	position: absolute;
+	left: 0px;
+	top: -200px;
+}
+aside {
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	background-color: #fff;
+	border-radius: 15px;
+	min-height: 250px;
+	box-shadow: 5px 5px 5px rgba(0,0,0, 0.06);
+}
+aside h1 {
+	background-image: -webkit-linear-gradient(top, #91b558, #85cb16);
+	background-image: -moz-linear-gradient(top, #91b558, #85cb16);
+	border-radius: 15px 15px 0 0;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	border: 1px solid rgba(53,58,51, 0.4);
+}
+aside p {
+	color: rgba(53,58,51, 0.8);
+	text-decoration: underline;
+	line-height: 30px;
+	padding: 15px;
+}
+footer {
+	background-color: rgb(53,58,51);
+	color: #fff;
+	font-size: 16px;
+	padding: 20px 0;
+	text-align: center;
+}
